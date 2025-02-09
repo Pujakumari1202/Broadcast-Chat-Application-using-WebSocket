@@ -27,6 +27,7 @@ wss.on("connection",(socket)=>{
     // when the client is disconnected it will remove the socket from the array
     socket.on("disconnet",()=>{
         allSockets=allSockets.filter(x=>x!=socket);
-    }
+    })
+
 
 })
