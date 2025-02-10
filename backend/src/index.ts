@@ -4,8 +4,10 @@ import { WebSocketServer , WebSocket} from "ws";
 
 const wss=new WebSocketServer({port:8080});
 
-//global object
-let allSockets:WebSocket[] =[];
+//global object to store all sockets 
+let allSockets={
+
+};
 
 wss.on("connection",(socket)=>{
     allSockets.push(socket);
