@@ -29,9 +29,9 @@ wss.on("connection",(socket)=>{
         if(parsedMessage.type=="join"){
 
 
-            console.log("user joined room"+ parsedMessage.payload.roomId)
+            //console.log("user joined room"+ parsedMessage.payload.roomId)
 
-            
+
             allSockets.push({
                 socket,
                 room:parsedMessage.payload.roomId
@@ -40,7 +40,7 @@ wss.on("connection",(socket)=>{
 
         // iterate over all sockets and find the socket that is in the same room
         if(parsedMessage.type=="chat"){
-            console.log("user wants to chat")
+            //console.log("user wants to chat")
 
 
             // const currentUserRoom=allSockets.find((x)=>x.socket==socket);
